@@ -1,0 +1,746 @@
+/* CSS file for the website. All the CSS should be in one file for efficient user experience.
+Import Google Fonts and Bootstrap Icons. */
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@700&family=Righteous&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+/* Necessary selectors */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.myNav {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  height: 40px;
+  font-family: 'Laila', sans-serif;
+  border-radius: 10px;
+}
+
+.myNav .navbar-brand {
+  font-family: 'Righteous', cursive;
+  font-size: 2.5rem;
+}
+
+.lightModeBlue {
+  color: rgb(13, 110, 253);
+}
+
+.lightModeBlue:hover {
+  color: rgb(25, 135, 84) !important;
+}
+
+.darkModeBlue {
+  color: rgb(77, 148, 255) !important;
+}
+
+.darkModeGreen {
+  color: rgb(0, 179, 95) !important;
+}
+
+.darkModeBlue:hover {
+  color: rgb(0, 179, 95) !important;
+}
+
+#darkSwitch {
+  position: absolute;
+  top: 26%;
+  right: 0;
+  cursor: pointer;
+}
+
+.darkSwitchLi {
+  position: relative;
+  padding-left: 24px;
+  padding-right: 32px;
+}
+
+.darkSwitchLi label {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 11.2px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(97, 97, 97);
+}
+
+/* Home section */
+#myHome {
+  height: 100vh;
+  max-height: 1080px;
+}
+
+.home-img {
+  height: 90%;
+  align-self: flex-end;
+}
+
+.home-heading {
+  font-family: 'Righteous', cursive;
+  font-size: 3.8rem;
+  text-align: center;
+}
+
+.home-info {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.home-left-section {
+  width: 550px;
+}
+
+.home-left-section a {
+  font-size: 1.3rem;
+}
+
+@keyframes animation-key1 {
+  0% {
+    left: 0;
+    bottom: 70%;
+  }
+
+  100% {
+    left: 30%;
+    bottom: 0;
+  }
+}
+
+@keyframes animation-key2 {
+  from {
+    transform: rotate(0deg) translateX(200px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(200px) rotate(-360deg);
+  }
+}
+
+@keyframes animation-key3 {
+  0% {
+    left: 0;
+    bottom: 0;
+  }
+
+  100% {
+    left: 30%;
+    bottom: 70%;
+  }
+}
+
+.animation1 {
+  width: 100px;
+  height: 100px;
+  background-color: hotpink;
+  border-radius: 5px;
+  opacity: 0.5;
+  position: absolute;
+  z-index: -1;
+  animation: animation-key1 18s linear 0s infinite alternate;
+}
+
+.animation2 {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  border-radius: 50%;
+  opacity: 0.4;
+  position: absolute;
+  z-index: -1;
+  bottom: 40%;
+  left: 15%;
+  animation: animation-key2 22s linear 0s infinite alternate;
+}
+
+.animation3 {
+  width: 70px;
+  height: 150px;
+  background-color: blueviolet;
+  border-radius: 5px;
+  opacity: 0.4;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 20%;
+  animation: animation-key3 20s linear 0s infinite alternate;
+}
+
+/* Featured Carousel section */
+#myCarousel img {
+  object-fit: cover;
+  opacity: 0.7;
+  height: 100vh;
+}
+
+/* Highlights Panel section */
+.highlights {
+  padding-top: 48px;
+}
+
+.highlights h1,
+.about h1,
+.contact h1,
+.postContainer h1,
+.notFound h1 {
+  font-family: 'Righteous', cursive;
+  font-size: 3.8rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.highlights .myHeaders {
+  max-width: 700px;
+  list-style: none;
+  justify-content: space-between;
+  margin: 30px auto 0;
+  padding: 0;
+}
+
+.highlights .myHeaders a {
+  text-decoration: none;
+  color: #212529;
+  padding: 10px;
+  font-size: 1.3rem;
+}
+
+.highlights .myHeaders a:hover,
+.highlights .myHeaders .current-select {
+  color: white;
+  background-color: #0d6efd;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.highlights .main-highlights .highlights-item {
+  width: 350px;
+  height: 220px;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+  position: relative;
+}
+
+.highlights .main-highlights img {
+  object-fit: cover;
+  border-radius: 10%;
+  position: absolute;
+}
+
+.highlights .main-highlights h3 {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(13, 110, 253, 0.6);
+  position: absolute;
+  top: 0;
+  border-radius: 10%;
+  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  z-index: 1;
+}
+
+/* About me section */
+.about .card {
+  width: 368px;
+  transition: all 1s;
+  position: relative;
+  z-index: 1;
+}
+
+.about .card a {
+  text-decoration: none;
+  color: rgb(33, 37, 41);
+}
+
+.about .card:hover {
+  transform: scale(1.2);
+}
+
+.about .card img {
+  width: 100%;
+  height: 192px;
+  object-fit: cover;
+}
+
+.about .card-body {
+  height: 300px;
+}
+
+.about .card button {
+  height: 45px;
+}
+
+.about .card-body span p {
+  margin-bottom: 0;
+}
+
+/* All Articles section */
+#myAllArticles .card-body {
+  height: 290px;
+}
+
+/* Contact section */
+.contact {
+  align-content: center;
+  padding-top: 20px;
+}
+
+.contact img {
+  width: 30%;
+  align-self: center;
+}
+
+.contact form {
+  width: 40%;
+  align-self: center;
+}
+
+.dark-modal-bg{
+  background-color: rgb(56, 56, 56);
+}
+
+/* Footer */
+.foot {
+  padding-top: 48px;
+  padding-bottom: 35.2px;
+}
+
+.foot .bi-twitter {
+  color: #1DA1F2;
+  font-size: 2rem;
+}
+
+.foot .social-icons {
+  width: 25.6px;
+  padding-bottom: 5px;
+}
+
+.foot img {
+  width: 56px;
+}
+
+/* Individual Article component */
+.postContainer {
+  max-width: 1200px;
+  padding: 0 5px;
+  margin: 0 auto;
+}
+
+.postContainer img {
+  border: 20px solid transparent;
+  border-image: url("/images/border.png") 30 round;
+  width: 75%;
+  height: 75vh;
+  object-fit: cover;
+}
+
+/* Error page when the user visits the wrong URL */
+.notFound img {
+  width: 30%;
+}
+
+/* Media Queries for various devices including smaller mobile ones and many other devices.
+The website should not be problematic on large devices */
+@media only screen and (min-width: 1730px) {
+  #myHome {
+    justify-content: space-between !important;
+  }
+
+  .highlights .main-highlights .highlights-item {
+    width: 380px;
+    height: 280px;
+  }
+
+  #myAbout .card {
+    transform: scale(1.1) translateY(0);
+  }
+
+  #myAbout .card:hover {
+    transform: scale(1.4) translateY(-8px);
+  }
+}
+
+/* Upto 1,400px device width */
+@media only screen and (max-width: 1400px) {
+  #myAbout,
+  #myAllArticles {
+    max-width: 95%;
+  }
+
+  #myContact {
+    max-width: 100%;
+  }
+}
+
+/* Upto 1,348px device width */
+@media only screen and (max-width: 1348px) {
+  .myNav ul li a,
+  .myNav ul li label {
+    font-size: 1.125rem !important;
+  }
+
+  #darkSwitch {
+    top: 10px;
+  }
+}
+
+/* Upto 1,265px device width */
+@media only screen and (max-width: 1265px) {
+  #myAbout,
+  #myAllArticles {
+    max-width: 90%;
+    justify-content: space-evenly !important;
+  }
+
+  .about .card {
+    width: 432px;
+  }
+
+  .about .card-body {
+    height: 270px;
+  }
+
+  #myAllArticles .card-body {
+    height: 260px;
+  }
+
+  .highlights .main-highlights .highlights-item {
+    width: 430px;
+    height: 300px;
+  }
+
+  #myHome {
+    max-width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* Upto 1,143px device width */
+@media only screen and (max-width: 1143px) {
+  .myNav {
+    height: 56px;
+    max-width: 1110px;
+  }
+
+  #darkSwitch {
+    right: 4.5%;
+    top: 22px;
+  }
+
+  #myAbout .card {
+    width: 512px;
+  }
+
+  #myAbout {
+    max-width: 70%;
+  }
+
+  #myAllArticles {
+    max-width: 90%;
+    justify-content: space-between !important;
+  }
+
+  .home-left-section {
+    width: 480px;
+  }
+
+  .home-img {
+    height: 80%;
+  }
+
+  .notFound img {
+    width: 40%;
+  }
+}
+
+/* Upto 1,110px device width */
+@media only screen and (max-width: 1110px){
+  .myNav{
+    border-radius: 0;
+  }
+}
+
+/* Upto 1,045px device width */
+@media only screen and (max-width: 1045px) {
+  #myAllArticles .card {
+    width: 512px;
+  }
+
+  #myAllArticles .card-body {
+    height: 230px;
+  }
+
+  #myAllArticles {
+    max-width: 70%;
+    justify-content: center !important;
+  }
+
+  #myContact {
+    justify-content: space-between;
+  }
+
+  #myContact form {
+    width: 50%;
+  }
+
+  #myContact img {
+    width: 40%;
+  }
+}
+
+/* Upto 991.5px device width */
+@media only screen and (max-width: 991.5px) {
+  .myNav {
+    height: 50px;
+    width: 442px;
+    padding-top: 0;
+    border-radius: 10px;
+  }
+
+  .myNav ul {
+    border-radius: 20px;
+    background-color: white;
+    width: 200px;
+    margin: 10px auto 0;
+  }
+
+  .myNav .myNav-black {
+    background-color: black;
+  }
+
+  .navbar-brand {
+    padding: 0;
+    line-height: 50px;
+  }
+
+  .myNav ul li {
+    margin: 0 !important;
+  }
+
+  #darkSwitch {
+    margin: 0;
+    top: 13px;
+    left: 130px;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  .navbar-toggler {
+    border: 1px solid black;
+  }
+
+  .darkNavIcon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  .darkNavToggler {
+    border: 1px solid white;
+  }
+
+  .home-img {
+    display: none;
+  }
+
+  .foot {
+    max-width: 100%;
+  }
+}
+
+/* Upto 850px device width */
+@media only screen and (max-width: 850px) {
+  .home-left-section {
+    width: 550px;
+  }
+
+  .animation2 {
+    left: 30%;
+  }
+
+  @keyframes animation-key1 {
+    0% {
+      left: 0;
+      bottom: 70%;
+    }
+
+    100% {
+      left: 60%;
+      bottom: 0;
+    }
+  }
+
+  @keyframes animation-key3 {
+    0% {
+      left: 0;
+      bottom: 0;
+    }
+
+    100% {
+      left: 60%;
+      bottom: 70%;
+    }
+  }
+
+  .about {
+    max-width: 90% !important;
+  }
+
+  .contact img {
+    display: none;
+  }
+
+  #myContact form {
+    width: 450px;
+  }
+
+  .foot .logo {
+    display: none;
+  }
+
+  .contact form {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  .contact button {
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .notFound img {
+    width: 60%;
+  }
+}
+
+/* Upto 620px device width */
+@media only screen and (max-width: 620px) {
+  html {
+    font-size: 14px;
+  }
+
+  #myAbout .card,
+  #myAllArticles .card {
+    width: 390px !important;
+  }
+
+  .about .card-body {
+    height: 240px;
+  }
+
+  .myNav {
+    width: 100vw;
+    border-radius: 0;
+  }
+
+  .postContainer img {
+    width: 100%;
+  }
+}
+
+/* Upto 500px device width */
+@media only screen and (max-width: 500px) {
+  @keyframes animation-key2 {
+    from {
+      transform: rotate(0deg) translateX(70px) rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg) translateX(70px) rotate(-360deg);
+    }
+  }
+
+  .animation2 {
+    animation: animation-key2 15s linear 0s infinite alternate;
+  }
+
+  .highlights .myHeaders a {
+    font-size: 1rem;
+  }
+
+  .highlights .main-highlights .highlights-item {
+    width: 95%;
+  }
+
+  .about .card {
+    transform: scale(1) translateY(0);
+  }
+
+  .about .card:hover {
+    transform: scale(1.15) translateY(-8px);
+  }
+
+  #myAllArticles .card-body {
+    height: 260px;
+  }
+
+  .contact {
+    height: auto;
+    align-content: center;
+  }
+
+  .foot *{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Upto 350px device width */
+@media only screen and (max-width: 350px) {
+  .home-heading {
+    font-size: 3rem;
+  }
+
+  .highlights h1,
+  .about h1,
+  .contact h1,
+  .postContainer h1,
+  .notFound h1 {
+    font-size: 3rem;
+  }
+
+  .highlights .main-highlights .highlights-item {
+    height: 200px;
+  }
+
+  .highlights .myHeaders a, .about span{
+    font-size: 0.95rem;
+  }
+
+  .about .card button {
+    height: 35px;
+  }
+
+  .about .card-body {
+    height: 310px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .about .card img {
+    height: 130px;
+  }
+}
